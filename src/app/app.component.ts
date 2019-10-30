@@ -13,19 +13,19 @@ export class AppComponent {
       title: 'mon premier post',
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
       loveIts: '3',
-      created_at: 'Date'
+      created: 'Date'
     },
     {
       title: 'mon deuxième post',
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
       loveIts: '3',
-      created_at: 'Date'
+      created: 'Date'
     },
     {
       title: 'encore un poste',
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
       loveIts: '3',
-      created_at: 'Date'
+      created: 'Date'
     }
   ];
 
