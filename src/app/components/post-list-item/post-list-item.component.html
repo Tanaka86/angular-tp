@@ -1,7 +1,19 @@
 
-<div style="text-align:center">
-  <h1>
-    titre post list item
-  </h1>
-</div>
-<app-post-list-item></app-post-list-item>
+<li class="list-group-item" [ngStyle]="{'background-color': getColor()}">
+  
+
+  <h3>
+    {{titreItem}}
+  </h3>
+  <div align="right"> Mis à jour le : {{ lastUpdate | date : 'mediumTime'  }}</div>
+  
+<p>
+  {{contentItem}}
+</p>
+
+  <div>
+  <button  class="btn btn-primary" (click)="onLove()">Love it</button> &nbsp;
+  <button  class="btn btn-danger" (click)="onNoLove()">Don't love it !!!</button>
+  </div>
+
+</li>

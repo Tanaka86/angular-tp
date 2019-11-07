@@ -6,20 +6,38 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./post-list-item.component.css']
 })
 export class PostListItemComponent implements OnInit {
+  lastUpdate = new Date();
+  compteurL:number = 0;
+  compteurNl:number = 0;
+
+ 
 
   @Input() titreItem: string;
   @Input() contentItem: string;
   @Input() loveItsItem: string;
-  @Input() createdItem: string;
-  
 
+  
   constructor() { }
 
   onLove() {
-    console.log('LOVE');
+    this.compteurL++;
+    console.log(this.compteurL);
   }
   onNoLove() {
-    console.log('NOTLOVE');
+   this.compteurNl++;
+   console.log(this.compteurNl);
+  }
+
+  getColor(){
+    if (this.compteurL > this.compteurNl) {
+      return 'blue';
+  
+    } 
+    else if( this.compteurL < this.compteurNl) {
+      return 'red';
+    }
+  
+  
   }
 
   ngOnInit() {
